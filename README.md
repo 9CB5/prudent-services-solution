@@ -1,7 +1,7 @@
 ## Prudent Services Ltd
 This is my solution for the coding test made by Prudent Services Ltd.
 
-The project is made using the following technologies:
+The project uses the following technologies:
 
  - Reactjs (v. 18.2.0)
  - Bootstrap 5
