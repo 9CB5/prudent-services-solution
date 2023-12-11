@@ -25,7 +25,7 @@ import { useState } from 'react';
 function App() {
     const [productsFiltered, setFilteredProducts] = useState([...products]);  // products filtered
     const [productsSelected, setSelectedProducts] = useState([]);  // products in cart
-    const [productsPurchased, setPurchasedProducts] = useState([])  // products purchased
+    const [productsPurchased, setPurchasedProducts] = useState([]);  // products purchased
 
     // add product to cart
     const handleAddToCart = (product) => {
@@ -100,8 +100,8 @@ function App() {
             <Header
                 productsInCart={ [...productsSelected] }
                 quantityChange={ handleQuantityChange }
-                deleteProduct = { handleDeleteProduct }
-                purchaseProduct = { handlePurchaseProduct }
+                deleteProduct={ handleDeleteProduct }
+                purchaseProduct={ handlePurchaseProduct }
             />
 
             <ProductFilter

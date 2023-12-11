@@ -10,7 +10,7 @@ function ProductFilter({changeFilter}) {
             <label htmlFor="product-filter">Filter: </label>
 
             <select
-                onChange={handleChangeFilter}
+                onChange={ handleChangeFilter }
                 className="border p-1 rounded"
                 id="product-filter"
                 name="product-filter"

@@ -53,8 +53,8 @@ function Header({productsInCart, quantityChange, deleteProduct, purchaseProduct}
                     <Cart
                         productsInCart={ productsInCart }
                         quantityChange={ quantityChange }
-                        deleteProduct = { deleteProduct }
-                        purchaseProduct = { purchaseProduct }
+                        deleteProduct={ deleteProduct }
+                        purchaseProduct={ purchaseProduct }
                     /> : ""
                 }
             </div>
