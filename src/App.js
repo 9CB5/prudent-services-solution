@@ -6,7 +6,7 @@ import './App.css';
 // Components
 // ================================================================================================
 import Header from "./components/common/Header";
-import Footer from "./components/common/Footer";
+// import Footer from "./components/common/Footer";
 import ProductFilter from './components/product/ProductFilter';
 
 // Pages
@@ -23,7 +23,7 @@ import { useState } from 'react';
 
 
 function App() {
-    const [productsFiltered, setFilterProducts] = useState([...products]);  // products filtered
+    const [productsFiltered, setFilteredProducts] = useState([...products]);  // products filtered
     const [productsSelected, setSelectedProducts] = useState([]);  // products in cart
     const [productsPurchased, setPurchasedProducts] = useState([])  // products purchased
 
@@ -65,7 +65,7 @@ function App() {
 
             // if not, add it to the accumulator
             if (!isNameExists) {
-              accumulator.push(currentObject);
+                accumulator.push(currentObject);
             }
 
             return accumulator;
@@ -79,21 +79,21 @@ function App() {
         const allProducts = [...products];
 
         if (filter === "all") {
-            setFilterProducts([...products]);
+            setFilteredProducts([...products]);
             // ------------------------------------------------------------------------------------
         } else if (filter === "purchased") {
             const purchased = allProducts.filter(allProduct =>
                 productsPurchased.some(productPurchased => productPurchased.name === allProduct.name)
             );
 
-            setFilterProducts([...purchased]);
+            setFilteredProducts([...purchased]);
             // ------------------------------------------------------------------------------------
         } else if (filter === "not-purchased") {
             const notPurchased = allProducts.filter(allProduct =>
                 !productsPurchased.some(productPurchased => productPurchased.name === allProduct.name)
             );
 
-            setFilterProducts([...notPurchased]);
+            setFilteredProducts([...notPurchased]);
         }
     }
 
