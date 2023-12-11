@@ -64,15 +64,13 @@ function App() {
             const isNameExists = accumulator.some(obj => obj.name === currentObject.name);
 
             // if not, add it to the accumulator
-            if (!isNameExists) {
-                accumulator.push(currentObject);
-            }
+            if (!isNameExists) accumulator.push(currentObject);
 
             return accumulator;
-          }, []);
+        }, []);
 
-          setPurchasedProducts([...uniqueProducts]);
-          setSelectedProducts([]);  // empty the cart
+        setPurchasedProducts([...uniqueProducts]);
+        setSelectedProducts([]);  // empty the cart
     }
 
     const handleChangeFilter = (filter) => {
